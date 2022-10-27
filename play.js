@@ -6,5 +6,8 @@ const conn = require("./client.js");
 conn.on("connect", (msg) => {
   // code that does something\
   conn.write ("Name: ber")
+    setTimeout(() => {
+    conn.write ("Move: up")
+  }, 100);
   console.log(msg);
 });
